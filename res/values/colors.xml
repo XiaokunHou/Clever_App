@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red">#900</color>
+    <color name="green">#090</color>
+    <color name="blue">#009</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+    <color name="light_blue">#add8e6</color>
+    <color name="sgray">#a9a9a9</color>
+    
+    <color name="Health_T">#009688</color>
+    <color name="Health_C">#00897b</color>
+    <color name="History_T">#495abf</color>
+    <color name="History_C">#3949ab</color>
+    <color name="Computer_T">#607d8b</color>
+    <color name="Computer_C">#549e7a</color>
+    <color name="Art_T">#673ab7</color>
+    <color name="Art_C">#5e35b1</color>
+    
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#303030</color>
+    <color name="list_background_pressed">#992416</color>
+    <color name="list_divider">#272727</color>
+    <color name="counter_text_bg">#626262</color>
+    <color name="counter_text_color">#c5c4c4</color>
+    
+</resources>

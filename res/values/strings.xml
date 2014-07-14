@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EClever2</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- temp tags here, it should be read from server or sqlite  -->
+    <string-array name="nav_drawer_items">
+        <item>All</item>
+        <item>Physical</item>
+        <item>Art</item>
+        <item>Food</item>
+        <item>Kichen</item>
+        <item>冷笑话</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_tag</item>
+    </array>
+    
+        <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+
+</resources>
