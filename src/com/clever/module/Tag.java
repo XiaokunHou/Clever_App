@@ -29,7 +29,7 @@ public class Tag {
 		this.icon = resourceId;
 	}
 
-	public Tag(String title, int icon, boolean isCounterVisible, String count){
+	public Tag(String title, int icon, boolean isCounterVisible, String count) {
 		this.tagName = title;
 		this.icon = icon;
 		this.isCounterVisible = isCounterVisible;
@@ -83,5 +83,5 @@ public class Tag {
 	public void setCounterVisible(boolean isCounterVisible) {
 		this.isCounterVisible = isCounterVisible;
 	}
-	
+
 }

@@ -3,12 +3,15 @@ package com.clever.ui.customized;
 import java.util.List;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 import com.clever.module.Doc;
+import com.clever.ui.R;
 
 public class ArticleViewAdapter extends ArrayAdapter<Doc> {
 
@@ -22,5 +25,27 @@ public class ArticleViewAdapter extends ArrayAdapter<Doc> {
 	}
 
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {return null;}
+	public View getView(int position, View convertView, ViewGroup parent) {
+
+		Doc doc = getItem(position);
+
+		if (convertView == null) {
+			convertView = inflater.inflate(R.layout.article, null);
+		}
+
+		TextView article = (TextView) convertView
+				.findViewById(R.id.article_body);
+
+		Typeface face = Typefaces.get(context,
+				"fonts/RobotoTTF/Roboto-Light.ttf");
+		article.setTypeface(face);
+		article.setText(doc.getContent());
+		// WebView webview = (WebView) convertView
+		// .findViewById(R.id.article_webview);
+		// webview.loadDataWithBaseURL(null, doc.getContent(), "text/html",
+		// "utf-8", null);
+
+		return convertView;
+
+	}
 }

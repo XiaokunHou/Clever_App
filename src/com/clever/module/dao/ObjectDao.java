@@ -1,5 +1,6 @@
 package com.clever.module.dao;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +11,10 @@ import android.database.sqlite.SQLiteDatabase;
 import com.clever.module.Doc;
 import com.clever.module.Tag;
 
-public class ObjectDao {
+public class ObjectDao implements Serializable {
+
+	private static final long serialVersionUID = 2742595311557377344L;
+
 	private DBHelper helper;
 
 	public ObjectDao(Context context) {
@@ -54,7 +58,7 @@ public class ObjectDao {
 						doc.getCreateTime(), doc.getVoteUp(), doc.getVoteDown() });
 		db.close();
 	}
-	
+
 	public Cursor getAllTagCur() {
 		SQLiteDatabase db = helper.getReadableDatabase();
 		Cursor cursor = db.rawQuery("select * from tag", null);

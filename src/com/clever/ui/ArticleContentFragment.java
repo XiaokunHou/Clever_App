@@ -2,7 +2,6 @@ package com.clever.ui;
 
 import java.util.List;
 
-import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.os.Handler;
@@ -17,7 +16,6 @@ import com.clever.module.dao.ObjectDao;
 import com.clever.ui.customized.ArticleViewAdapter;
 
 //Color panels on right side
-@SuppressLint({ "ValidFragment", "NewApi" })
 public class ArticleContentFragment extends Fragment implements
 		SwipeRefreshLayout.OnRefreshListener {
 	private int mColorRes = -1;
@@ -33,16 +31,9 @@ public class ArticleContentFragment extends Fragment implements
 	private ArticleViewAdapter adapter;
 	// All articles
 	private List<Doc> contentList;
-	
-	public ArticleContentFragment(){
-		
-	}
 
-	@SuppressLint("NewApi")
-	public ArticleContentFragment(int colorRes, ObjectDao docDao) {
-		mColorRes = colorRes;
-		this.docDao = docDao;
-		setRetainInstance(true);
+	public ArticleContentFragment() {
+
 	}
 
 	@Override
@@ -53,20 +44,21 @@ public class ArticleContentFragment extends Fragment implements
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) { return null;}
+			Bundle savedInstanceState) {
+		return null;
+	}
 
-	@SuppressLint("NewApi")
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 	}
 
-	@SuppressLint("NewApi")
 	@Override
 	public void onDestroyView() {
 		super.onDestroyView();
 	}
 
 	// Refresh right panel.
-	public void onRefresh() {}
+	public void onRefresh() {
+	}
 }

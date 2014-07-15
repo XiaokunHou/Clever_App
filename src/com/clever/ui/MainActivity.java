@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
 	private ActionBarDrawerToggle mDrawerToggle;
 
 	// dao utility
-	private ObjectDao dao;
+	public ObjectDao dao;
 
 	// nav drawer title
 	private CharSequence mDrawerTitle;
@@ -45,6 +45,9 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		// initialize dao object
+		dao = new ObjectDao(this);
+
 		setContentView(R.layout.activity_main);
 
 		mTitle = mDrawerTitle = getTitle();
@@ -126,9 +129,10 @@ public class MainActivity extends Activity {
 	private void displayView(int position) {
 		// update the main content by replacing fragments
 		Fragment fragment = null;
+
 		switch (position) {
 		case 0:
-			fragment = new HomeFragment();
+			fragment = HomeFragment.newInstance(dao, R.color.Health_T);
 			break;
 		case 1:
 			fragment = new ArticleContentFragment();
@@ -220,6 +224,10 @@ public class MainActivity extends Activity {
 		super.onConfigurationChanged(newConfig);
 		// Pass any configuration change to the drawer toggls
 		mDrawerToggle.onConfigurationChanged(newConfig);
+	}
+
+	public ObjectDao getDao() {
+		return dao;
 	}
 
 }
