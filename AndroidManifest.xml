@@ -5,12 +5,12 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="7"
-        android:targetSdkVersion="11" />
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_tag"
+        android:icon="@drawable/icon_red"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
