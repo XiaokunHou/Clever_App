@@ -132,7 +132,7 @@ public class MainActivity extends Activity {
 
 		switch (position) {
 		case 0:
-			fragment = HomeFragment.newInstance(dao, R.color.Health_T);
+			fragment = HomeFragment.newInstance(dao, R.color.Health_T, 0);
 			break;
 		case 1:
 			fragment = new ArticleContentFragment();

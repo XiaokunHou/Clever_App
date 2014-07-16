@@ -32,13 +32,16 @@ public class HomeFragment extends Fragment implements
 	private ListView articleView;
 	// listView adapter
 	private ArticleViewAdapter adapter;
+	// tag ID has been clicked
+	private int tagID;
 
 	// use bundle to pass object from activity to fragment
-	public static HomeFragment newInstance(ObjectDao dao, int color) {
+	public static HomeFragment newInstance(ObjectDao dao, int color, int tagID) {
 		HomeFragment fragment = new HomeFragment();
 		Bundle bundle = new Bundle();
 		bundle.putSerializable("dao", dao);
 		bundle.putInt("color", color);
+		bundle.putInt("tagID", tagID);
 		fragment.setArguments(bundle);
 
 		return fragment;
@@ -47,7 +50,11 @@ public class HomeFragment extends Fragment implements
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-
+		// get data from activity
+		dao = (ObjectDao) getArguments().getSerializable("dao");
+		colorRes = getArguments().getInt("color");
+		tagID=getArguments().getInt("tagID");
+		
 		View rootView = inflater.inflate(R.layout.articles, container, false);
 		swipeLayout = (SwipeRefreshLayout) rootView
 				.findViewById(R.id.swipe_refresh);
@@ -60,14 +67,12 @@ public class HomeFragment extends Fragment implements
 				android.R.color.holo_orange_light);
 
 		// get dao and query data from server
-		dao = (ObjectDao) getArguments().getSerializable("dao");
 		articleList = dao.getAllDoc();
 		articleView = (ListView) rootView.findViewById(R.id.listview);
 		adapter = new ArticleViewAdapter(getActivity(), articleList);
 		articleView.setAdapter(adapter);
 
 		// set background color
-		colorRes = getArguments().getInt("color");
 		int color = getResources().getColor(colorRes);
 		rootView.setBackgroundColor(color);
 
@@ -106,7 +111,7 @@ public class HomeFragment extends Fragment implements
 		};
 
 		// get request to fetch articles from server
-		ArticlesGetRequest get = new ArticlesGetRequest(handler);
+		ArticlesGetRequest get = new ArticlesGetRequest(handler, tagID);
 		Thread thread = new Thread(get);
 		thread.start();
 

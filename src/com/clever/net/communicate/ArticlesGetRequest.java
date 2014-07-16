@@ -21,9 +21,13 @@ public class ArticlesGetRequest implements Runnable {
 	private String result = "";
 	private Handler handler;
 	private boolean needRefresh = true;
+	
+	// tag id to indicate which articles should be listed
+	private int tagID;
 
-	public ArticlesGetRequest(Handler hal) {
+	public ArticlesGetRequest(Handler hal, int tagID) {
 		this.handler = hal;
+		this.tagID=tagID;
 	}
 
 	public void sendGet(String target) {
