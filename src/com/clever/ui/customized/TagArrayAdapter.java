@@ -11,7 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.clever.module.Tag;
+import com.clever.model.Tag;
 import com.clever.ui.R;
 
 public class TagArrayAdapter extends BaseAdapter {

@@ -54,7 +54,7 @@ public class ArticlesGetRequest implements Runnable {
 	@Override
 	public void run() {
 		if (needRefresh == true) {
-			sendGet("http://fierce-meadow-3934.herokuapp.com/doc/recent?begin=1&end=3&format=json");
+			sendGet("http://10.197.32.102:5000/doc/recent?begin=1&end=3&format=json");
 			Message m = handler.obtainMessage();
 			Bundle bundle = new Bundle();
 			m.what = 0X101;

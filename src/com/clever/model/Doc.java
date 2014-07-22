@@ -1,4 +1,4 @@
-package com.clever.module;
+package com.clever.model;
 
 import java.util.ArrayList;
 import java.util.Date;

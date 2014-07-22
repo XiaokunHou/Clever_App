@@ -7,7 +7,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.clever.module.Doc;
+import com.clever.model.Doc;
 
 /*
  * Use this class to parse all json data from server.

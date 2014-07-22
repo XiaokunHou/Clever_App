@@ -1,4 +1,4 @@
-package com.clever.module;
+package com.clever.model;
 
 /*
  * Definition for comments under one article. 

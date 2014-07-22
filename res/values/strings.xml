@@ -3,6 +3,9 @@
 
     <string name="app_name">Clever</string>
     <string name="action_settings">Settings</string>
+    <string name="compose">分享知识</string>
+    <string name="add_knowledge">添加</string>
+    <string name="send_knowledge">完成</string>
 
     <!-- temp tags here, it should be read from server or sqlite  -->
     <string-array name="nav_drawer_items">

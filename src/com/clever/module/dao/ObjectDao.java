@@ -8,8 +8,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.clever.module.Doc;
-import com.clever.module.Tag;
+import com.clever.model.Doc;
+import com.clever.model.Tag;
 
 public class ObjectDao implements Serializable {
 

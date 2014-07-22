@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.clever.module.Doc;
+import com.clever.model.Doc;
 import com.clever.module.dao.ObjectDao;
 import com.clever.ui.customized.ArticleViewAdapter;
 

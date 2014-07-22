@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.clever.module.Doc;
+import com.clever.model.Doc;
 import com.clever.ui.R;
 
 public class ArticleViewAdapter extends ArrayAdapter<Doc> {
