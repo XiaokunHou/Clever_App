@@ -53,8 +53,8 @@ public class HomeFragment extends Fragment implements
 		// get data from activity
 		dao = (ObjectDao) getArguments().getSerializable("dao");
 		colorRes = getArguments().getInt("color");
-		tagID=getArguments().getInt("tagID");
-		
+		tagID = getArguments().getInt("tagID");
+
 		View rootView = inflater.inflate(R.layout.articles, container, false);
 		swipeLayout = (SwipeRefreshLayout) rootView
 				.findViewById(R.id.swipe_refresh);

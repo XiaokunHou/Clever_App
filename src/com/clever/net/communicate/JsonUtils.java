@@ -13,7 +13,7 @@ import com.clever.model.Doc;
  * Use this class to parse all json data from server.
  */
 public class JsonUtils {
-
+	// parse json to objects
 	public static List<Doc> parseDocs(String recentDocs) {
 		// TODO Auto-generated method stub
 
@@ -46,6 +46,20 @@ public class JsonUtils {
 			e.printStackTrace();
 		}
 		return docs;
+	}
+
+	// convert DOc to json object
+	public static JSONObject DocToJson(Doc doc) {
+		JSONObject docJson = new JSONObject();
+		try {
+			docJson.put("title", doc.getTitle());
+			docJson.put("content", doc.getContent());
+			docJson.put("tagid", doc.getTagIDs().get(0));
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return docJson;
 	}
 
 }

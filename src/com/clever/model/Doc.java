@@ -7,6 +7,7 @@ import java.util.Date;
  * Definition for articles. 
  */
 public class Doc {
+	private String title;
 	private int docID;
 	private String content;
 	private Date createTime;
@@ -73,6 +74,22 @@ public class Doc {
 
 	public void setComments(ArrayList<Comment> comments) {
 		this.comments = comments;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public ArrayList<Integer> getTagIDs() {
+		return tagIDs;
+	}
+
+	public void setTagIDs(ArrayList<Integer> tagIDs) {
+		this.tagIDs = tagIDs;
 	}
 
 }

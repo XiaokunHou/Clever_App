@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBHelper extends SQLiteOpenHelper implements Serializable {
 
 	private static final long serialVersionUID = 3646946768121823395L;
-	
+
 	private static final String DB_NAME = "clever.db";
 	private static final int VERSION = 1;
 

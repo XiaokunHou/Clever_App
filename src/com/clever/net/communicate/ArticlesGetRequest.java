@@ -17,17 +17,16 @@ import android.os.Message;
 /*
  * Process all requests between server and client.
  */
-public class ArticlesGetRequest implements Runnable {
-	private String result = "";
-	private Handler handler;
+public class ArticlesGetRequest extends NetworkRequest {
+
 	private boolean needRefresh = true;
-	
+
 	// tag id to indicate which articles should be listed
 	private int tagID;
 
 	public ArticlesGetRequest(Handler hal, int tagID) {
 		this.handler = hal;
-		this.tagID=tagID;
+		this.tagID = tagID;
 	}
 
 	public void sendGet(String target) {
@@ -64,11 +63,4 @@ public class ArticlesGetRequest implements Runnable {
 		}
 	}
 
-	public String getResult() {
-		return result;
-	}
-
-	public void setResult(String result) {
-		this.result = result;
-	}
 }
